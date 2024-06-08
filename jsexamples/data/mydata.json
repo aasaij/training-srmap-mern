@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "email": "aasaij@gmail.com",
+      "first_name": "Aasaithambi",
+      "last_name": "Jay",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg",
+      "id": "8"
+    },
+    {
+      "id": "9",
+      "email": "testing@gmail.com",
+      "first_name": "Testing",
+      "last_name": "API Calls"
+    },
+    {
+      "id": "10",
+      "email": "byron.fields@reqres.in",
+      "first_name": "Byron",
+      "last_name": "Fields",
+      "avatar": "https://reqres.in/img/faces/10-image.jpg"
+    },
+    {
+      "id": "16",
+      "email": "srmap4@gmail.com",
+      "first_name": "Ramesh4",
+      "last_name": "Venkata4",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
+    },
+    {
+      "id": "15",
+      "email": "srmap@gmail.com",
+      "first_name": "Ramesh",
+      "last_name": "Venkata",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
+    },
+    {
+      "id": "17",
+      "email": "srmap1@gmail.com",
+      "first_name": "Ramesh1",
+      "last_name": "Venkata1",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
+    },
+    {
+      "id": "17",
+      "email": "srmap1@gmail.com",
+      "first_name": "Ramesh1",
+      "last_name": "Venkata1",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
+    }
+  ]
+}

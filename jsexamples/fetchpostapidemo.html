@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Post Data</button>
+
+    <script>
+        const URL = "http://localhost:4000/data"
+        const data = {email: "srmap1@gmail.com",
+                     first_name: "Ramesh1",
+                     last_name: "Venkata1",
+                     avatar: "https://reqres.in/img/faces/8-image.jpg",
+                     id: "17"
+                    }
+        const postRequest = async () =>  {
+                const response = await fetch(URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(
+                    async (result) => {
+                        await console.log("Result " + result.status)
+                    }
+                ).catch(
+                    (error) => {
+                        console.log('Error')
+                    }
+                )
+        }       
+        const btnElement = document.getElementById("btn1")
+        btnElement.addEventListener("click", (event) => {
+            event.preventDefault()
+            postRequest()
+        }
+        )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const arr = [10, 10.5,11, 12,  "Testing", true, 123, 467]
+        // outerLoop:
+        //     for (let y in arr){
+        //         innerLoop:
+        //             for (let x of arr){
+        //                 if (typeof x === "string" )
+        //                     break outerLoop
+        //                 document.write(x)
+        //             }
+        //         document.write("<br/>")
+        //     }
+        // document.write("<h1>Thank you for being very interactive!</h1>")
+        const arr = [10, 10.5,11, 12,  "Testing", true, 123, 467]
+        outerLoop:
+            for (let y in arr){
+                innerLoop:
+                    for (let x of arr){
+                        if (typeof x === "string" )
+                            continue outerLoop
+                        document.write(x + ", ")
+                    }
+                document.write("<br/>")
+            }
+        document.write("<h1>Thank you for being very interactive!</h1>")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/mystyles.css">
+</head>
+<body>
+    <form action="" onsubmit="validate(event)" name="frmContact">
+        <label for="txtFirstName">First Name</label>
+        <input 
+                type="text" 
+                name="txtFirstName" 
+                id="txtFirstName"
+                tabindex="0"
+                />
+        <label for="txtLastName">Last Name</label>
+        <input type="text" name="txtLastName" id="txtLastName"/>
+        <label for="txtEmail">Email Id</label>
+        <input type="email" name="txtEmail" id="txtEmail"/>
+        <label for="txtContact">Contact Number</label>
+        <input type="number" name="txtContact" id="txtContact"/>
+        <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" name="rbGender" id="rbMale" value="M"/> Male 
+            <input type="radio" name="rbGender" id="rbFemale" value="F"/> Female 
+        </fieldset>
+        <label for="txtComments">Comments</label>
+        <textarea name="txtComments" id="txtComments" rows="5"></textarea>
+        <input type="submit" value="Submit">
+        <!-- <button  onclick="validate()">Submit</button> -->
+    </form>
+    <script>
+        function getFullName(evt){
+            evt.preventDefault()
+            let firstName = document.getElementById("txtFirstName").value
+            let lastName = document.getElementById("txtLastName").value
+            alert(firstName + lastName)
+            document.getElementById("txtComments").value = firstName + lastName
+        }
+    </script>
+    <script src="./assets/scripts/myscripts.js"></script>
+</body>
+</html>
+
+
+

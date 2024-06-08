@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createPromise(){
+            const promise = new Promise((resolve, reject)=>{
+                setTimeout(
+                    ()=> {
+                        let x = undefined
+                        if (x)
+                            resolve(x)
+                        else
+                            reject(new Error('Data not found!'))
+                    }, 4000)
+            })
+            return promise
+        }
+        async function promiseDemo (){
+            const data = await createPromise()
+                .then(
+                    (msg)=>{
+                        document.write(msg + "<br/>") 
+                        }
+                    )
+                .catch(
+                    (err) => {
+                        document.write(err.stack+ "<br/>") 
+                    }
+                )
+                .finally(
+                    () => {
+                        document.write('This is finally block<br/>')
+                    }
+                )
+            document.write('inside function but after promise')
+        }
+        promiseDemo()
+        document.write('This is after promise')
+    </script>
+</body>
+</html>

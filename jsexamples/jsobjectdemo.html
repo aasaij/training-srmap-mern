@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const person = {
+        //     id : 1,
+        //     firstName : "Vamsi",
+        //     lastname : "Sasidhar",
+        //     gender : "M",
+        //     fullName : function(){
+        //         let title = ""
+        //         if (this.gender === "M")
+        //             title = "Mr. "
+        //         else
+        //             title = "Ms. "
+        //         return title + this.firstName + " " + this.lastname
+        //     }
+        // }
+        // const employee = new Object()
+        // // const employee = {}
+        // employee.id = 101
+        // employee.firstName = "Harshitha"
+        // employee.lastName = "Balineni"
+        // employee.gender = "Female"
+        function Person(id, firstName, lastName, salary){
+            this.id = id
+            this.firstName = firstName
+            this.lastName = lastName
+            this.salary = salary
+        }
+
+        const employee = new Person(1, "Ravi", "Chandra", 1000000)
+
+        employee.fullName = function (){
+            return this.firstName + " " + this.lastName
+        }
+        employee.gender = "Male"
+
+        for (let data in employee){
+            document.write(employee[data] + "<br/>")
+        }
+        // document.write(employee.fullName())
+
+        // document.write(person.fullName())
+    </script>    
+</body>
+</html>
+
+https://bit.ly/TT-070624
+Trainer : Tambi
+Session : AN
+
+
+
+

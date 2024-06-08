@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let n = 15
+        // for (let x = n%2==0?n-1:n, y = 10; x >= 1; document.write(x + " "),x-=2);
+        // let x = 1
+        // while (x<=n){
+        //     document.write(x++ + "<br/>")
+        // }
+        // do{
+        //     document.write(x++ + "<br/>")
+        // }while (x <= n);
+        const names = ["Ramesh", "Vamsi", "Abdullah", "Chakra", "Phalgun"]
+        // for (let index = 0; index<names.length; index++){
+        //     document.write('Name : ' + names[index].toUpperCase() + "<br/>")
+        // }
+            // for (let name in names){
+            //     document.write('Name : ' + names[name].toLowerCase() + "<br/>")
+            // }
+            // for (let name of names){
+            //     document.write('Name : ' + name.toUpperCase() + "<br/>")
+            // }
+            // names.forEach(function (name){
+            //     document.write('Name : ' + name.toLowerCase() + "<br/>")
+            // })
+            // names.forEach((data) => {document.write(data + "<br/>")} )
+            // let newNames = names.map((name) => name.toUpperCase())
+            // newNames.forEach((data) => {document.write(data + "<br/>")} )
+            // names.forEach(name => {
+            //     if (name.endsWith("gun"))
+            //         document.write(name)
+            // })
+            const employees =[ 
+                {
+                    id : 1,
+                    firstName : "Vamsi", 
+                    lastName : "Sasidhar",
+                    gender : "Male",
+                    Salary : 500000,
+                    phone : [108,104,109],
+                    address : {
+                            street : "MG Road",
+                            city : "Bangalore"
+                    }
+                },
+                {
+                    id : 2,
+                    firstName : "Abdullah", 
+                    lastName : "Mohammed",
+                    gender : "Male",
+                    Salary : 600000,
+                    phone : [100,110, 222],
+                    address : {
+                            street : "GST Road",
+                            city : "Chennai"
+                    }
+                },
+                {
+                    id : 3,
+                    firstName : "Ramesh", 
+                    lastName : "Venkata",
+                    gender : "Male",
+                    Salary : 700000,
+                    phone : [109,115, 888],
+                    address : {
+                            street : "Benz Circle",
+                            city : "Vijayawada"
+                    }
+                }
+            ]
+
+            // document.write(employee.firstName)
+            // document.write(employee["lastName"])
+            let data = "<p style='color:blue'>"
+            for (let employee of employees){
+                for(let x in employee){
+                    if (employee[x] instanceof Array)
+                        data += "<b>" + x + "</b> : <span style='color:red'>"  + employee[x] + "</span><br>"
+                    else if (employee[x] instanceof Object ){
+                        for (let y in employee[x]){
+                            data += "<b>" + y + "</b> : <span style='color:red'>"  + employee[x][y] + "</span><br>"
+                        }
+                    }
+                    else{
+                        data += "<b>" + x + "</b> : <span style='color:red'>"  + employee[x] + "</span><br>"
+                    }                    
+                    // document.write(employee[x] + "<br/>")
+                }
+            }
+            data += "</p>"
+            document.write(data)                
+    </script>    
+</body>
+</html>

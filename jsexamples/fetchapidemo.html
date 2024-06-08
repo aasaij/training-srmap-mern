@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ( async function() {
+            const URL = "http://localhost:4000/data"
+            const response = await fetch(URL, {})
+                    .then(
+                         async (data) => result = await data.json()  
+                        
+                    ).then((result) => {
+                        for (let obj of result){
+                                for (let key in obj){
+                                    document.write(key + " : " + obj[key] + "<br/>")
+                                }
+                            }
+                    })
+                    .catch(
+                        (error) => {
+                            document.write('Error')
+                        }
+                    )
+                    .finally(
+                        () => {
+                        //  document.write("Finally")   
+                        }
+                    )
+        //  const txt = await response.json()   
+         
+        }
+    )()
+
+    </script>
+</body>
+</html>
+
+<!-- Attendance : https://bit.ly/ZZ-080624
+Trainer : Tambi
+Session : FN -->
+
+

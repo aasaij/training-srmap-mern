@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <p id="p1">Today's Date : </p>
+    <p id="p2"></p>
+    <script>
+        
+        let p1Element = document.getElementById('p1')
+        let p2Element = document.getElementById('p2')
+
+        let greeting = ""
+        let dayString = ""
+        p1Element.innerHTML += new Date()
+        // let hour = new Date().getHours();
+        // if (hour == 12)
+        //     greeting = "Good Morning!"
+        // else if (hour == 16)
+        //     greeting = "Good Afternoon"
+        // else
+        //     greeting = "Good Evening"
+        let day = new Date().getDay()
+        let x = 3
+        switch(day){
+            case 0: dayString = "Sunday" ; break;
+            case 1: dayString = "Monday" ; break;
+            case 2: dayString = "Tuesday" ; break;
+            case 6-3: dayString = "Wednesday"; break;
+            case 4: dayString = "Thursday"; break;
+            case 5: dayString = "Friday" ; break;
+            case 6: dayString = "Saturday";
+        }
+
+        p2Element.innerHTML = dayString
+        // p2Element.innerHTML = greeting
+    </script>
+</body>
+</html>

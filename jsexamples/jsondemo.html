@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jsontxt = '{"firstName":"Vamsi", "lastName":"Sasidhar", "age":16}'
+        let emp = {firstName : "Abdullah", lastName:"Mohammed", age:16}
+        const person = JSON.parse(jsontxt)
+
+        // for (let [key, value] of Object.entries(person)){
+        //     document.write(key + " : " + value + "<br/>")
+        // }
+        for (let key in person){
+            document.write(key + " : " + person[key] + "<br/>")
+        }
+        document.write(person)
+        let str = JSON.stringify(person)
+        document.write(str)
+    </script>
+</body>
+</html>

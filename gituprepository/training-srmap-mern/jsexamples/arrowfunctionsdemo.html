@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const add = (a,b) => a + b
+        //arrow function definition
+        // const greet = user => document.write('<h1>Good afternoon ' + user + '!</h1>')
+        // const greet = (user, gender) => {
+        //     let title = ""
+        //     if (gender === "female")
+        //         title = "Ms. "
+        //     else 
+        //         title = "Mr. "
+        //     document.write('<h1>Good afternoon ' + title + user + '</h1>')
+        // } 
+
+        //function calliing
+        // greet('Ishpreet', 'female')
+        // greet('Sriram', 'male')
+        function fun1(){
+            document.write('This is outer function<br/>')
+            function fun2(){
+                document.write('This is fun2<br/>')
+            }
+            (function(){
+                document.write('This is inner function<br/>')
+            })()
+            !function(){
+                document.write("This is another inner function<br/>")
+            }()
+            fun2()
+        }
+        (function(){
+            document.write('this will be the first function to be executed<br/>');
+        })()
+
+        fun1()
+
+
+    </script>
+</body>
+</html>

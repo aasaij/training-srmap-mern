@@ -1,0 +1,18 @@
+// console.log('Hello World!')
+// console.log(global)
+// const fileHandle = require('fs')
+// const path = require('path')
+// console.log(path.parse(__dirname))
+// const fileName = path.parse(__filename).name + path.parse(__filename).ext;
+
+// console.log(path.parse(__filename))
+// console.log(fileName)
+// const os = require('os')
+// console.log(os.version())
+// console.log(os.hostname())
+// console.log(os.homedir())
+// console.log(os.tmpdir())
+const {v4:uuid} = require('uuid')
+console.log('Application started...')
+console.log("this is another test")
+console.log(uuid())

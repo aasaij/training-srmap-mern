@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 const CreateEmployee = () => {
     const [name, setName] = useState("")
@@ -10,11 +10,12 @@ const CreateEmployee = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post("http://localhost:9000/createEmployee", {name, gender, salary})
-        .then(result => {
-            console.log(result)
-            navigate('/')
-        })
+        .then(result => 
+            console.log(result),
+            navigate("/")            
+        )
         .catch(err => console.log(err))
+        
     }
 
   return (
